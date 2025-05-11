@@ -45,6 +45,9 @@ export async function render_svg({
 		/* c8 ignore start */
 		(w, h, a, b) => {
 			var root = document.rootElement as SVGSVGElement;
+			if (!root || root.tagName.toLowerCase().indexOf("svg") < 0) {
+				throw new Error(`Not SVG: ${uri}`)
+			}
 			if (!(root.viewBox.baseVal.width > 0)) {
 				let { value } = root.width.baseVal;
 				if (value > 0) {

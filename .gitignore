@@ -132,4 +132,4 @@ out
 .tap/
 dist/
 .vscode/
-*.svg
+/*.svg
