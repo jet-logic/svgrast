@@ -60,7 +60,7 @@ export function main() {
             if (!output) {
                 throw new Error(`No output`);
             }
-            render_svg({
+            return render_svg({
                 uri, path,
                 output, width, height,
                 quality, bgcolor,

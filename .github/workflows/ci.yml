@@ -28,4 +28,6 @@ jobs:
       - run: npm i
       - run: npm run compile
       - run: ls ; ls dist
-      - run: npm run test
+      - run: |
+          node svgrast.js --help
+          npm run test
