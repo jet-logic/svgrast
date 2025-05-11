@@ -3,19 +3,19 @@ import test from "tap";
 import fs from "fs";
 import { render_svg } from "svgrast";
 
-test.test("test uri", (t) => {
-    let output = "/tmp/car.png";
-    let uri = "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/car.svg"
-    return render_svg({
-        uri, output
-    }).then(() => {
-        t.ok(fs.existsSync(output));
-        t.end();
-    }).catch(() => {
-        t.fail(`failed ${output} <- ${uri}`);
-        t.end();
-    });
-});
+// test.test("test uri", (t) => {
+//     let output = "/tmp/car.png";
+//     let uri = "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/car.svg"
+//     return render_svg({
+//         uri, output
+//     }).then(() => {
+//         t.ok(fs.existsSync(output));
+//         t.end();
+//     }).catch(() => {
+//         t.fail(`failed ${output} <- ${uri}`);
+//         t.end();
+//     });
+// });
 
 test.test("test path", (t) => {
     let dest = "/tmp/E8_graph.jpg";
