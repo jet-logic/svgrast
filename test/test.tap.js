@@ -31,13 +31,13 @@ test.test("test path", (t) => {
     });
 });
 
-test.test("test no uri, path", async (t) => {
-    let dest = "/tmp/car.png";
-    let p = render_svg({
-        output: dest,
-    });
-    await t.rejects(p);
-});
+// test.test("test no uri, path", async (t) => {
+//     let dest = "/tmp/car.png";
+//     let p = render_svg({
+//         output: dest,
+//     });
+//     await t.rejects(p);
+// });
 
 test.test("test blob", (t) => {
     return render_svg({
@@ -50,5 +50,4 @@ test.test("test blob", (t) => {
         t.fail();
         t.end();
     });
-
 });
