@@ -1,12 +1,12 @@
 {
   "name": "svgrast",
-  "version": "0.0.31",
+  "version": "0.0.4",
   "description": "Using puppeteer, convert svg files to png, jpeg, or webp ",
   "type": "module",
   "license": "GPL-3.0 license",
   "private": false,
   "engines": {
-    "node": ">= 14.0.0",
+    "node": ">= 16.0.0",
     "npm": ">= 6.0.0"
   },
   "homepage": "https://github.com/jet-logic/svgrast",

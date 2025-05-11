@@ -1,14 +1,15 @@
 name: Publish Package (npmjs)
 
-on: workflow_dispatch
+on:
+  push:
+    tags:
+      - "v*.*.*"
 
 jobs:
   start:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        # with:
-        #   ref: main
 
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
