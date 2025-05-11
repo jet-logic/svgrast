@@ -1,14 +1,15 @@
-name: Publish Package
+name: Publish Package (npmjs)
 
-on: workflow_dispatch
+on:
+  push:
+    tags:
+      - "v*.*.*"
 
 jobs:
   start:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: main
 
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
@@ -16,8 +17,9 @@ jobs:
           node-version: "22.x"
           registry-url: "https://registry.npmjs.org"
 
-      # - run: npm ci
-
+      - run: npm i
+      - run: npm run compile
+      - run: npm run test
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
