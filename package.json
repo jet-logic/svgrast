@@ -1,0 +1,62 @@
+{
+  "name": "svgrast",
+  "version": "0.0.3",
+  "description": "Using puppeteer, convert svg files to png, jpeg, or webp ",
+  "type": "module",
+  "license": "GPL-3.0 license",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "https://github.com/jet-logic/svgrast",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jet-logic/svgrast"
+  },
+  "bugs": "",
+  "keywords": [
+    "svg",
+    "convert",
+    "png",
+    "webp",
+    "jpeg",
+    "puppeteer",
+    "render"
+  ],
+  "contributors": [],
+  "scripts": {
+    "c8rephtml": "c8 report -r html",
+    "compile": "npx tsc -d --sourcemap",
+    "clean": "rm -r dist/*",
+    "test": "npx tap --disable-coverage --reporter=terse 'test/**/*.tap.*js'"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.32",
+    "tap": "^18.7.1",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "puppeteer": "^22.6.0",
+    "yargs": "^17.7.2"
+  },
+  "files": [
+    "dist",
+    "*.js"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./cli": "./dist/main.js"
+  },
+  "bin": {
+    "svgrast": "./svgrast.js"
+  },
+  "c8": {
+    "reports-dir": "/tmp/svgrast.c8/rep",
+    "temp-directory": "/tmp/svgrast.c8/tmp",
+    "src": "dist"
+  },
+  "prettier": {
+    "useTabs": true
+  }
+}
