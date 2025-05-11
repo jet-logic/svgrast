@@ -1,6 +1,6 @@
 {
   "name": "svgrast",
-  "version": "0.0.3",
+  "version": "0.0.31",
   "description": "Using puppeteer, convert svg files to png, jpeg, or webp ",
   "type": "module",
   "license": "GPL-3.0 license",
