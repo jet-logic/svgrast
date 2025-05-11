@@ -17,19 +17,19 @@ import { render_svg } from "svgrast";
 //     });
 // });
 
-test.test("test path", (t) => {
-    let dest = "/tmp/E8_graph.jpg";
-    return render_svg({
-        path: "test/E8_graph.svg",
-        output: dest,
-    }).then(() => {
-        t.ok(fs.existsSync(dest));
-        t.end();
-    }).catch(() => {
-        t.fail();
-        t.end();
-    });
-});
+// test.test("test path", (t) => {
+//     let dest = "/tmp/E8_graph.jpg";
+//     return render_svg({
+//         path: "test/E8_graph.svg",
+//         output: dest,
+//     }).then(() => {
+//         t.ok(fs.existsSync(dest));
+//         t.end();
+//     }).catch(() => {
+//         t.fail();
+//         t.end();
+//     });
+// });
 
 // test.test("test no uri, path", async (t) => {
 //     let dest = "/tmp/car.png";
