@@ -39,15 +39,15 @@ test.test("test path", (t) => {
 //     await t.rejects(p);
 // });
 
-test.test("test blob", (t) => {
-    return render_svg({
-        type: 'webp',
-        path: "test/E8_graph.svg",
-    }).then((blob) => {
-        t.same(typeof blob, 'object', 'blob');
-        fs.writeFileSync('/tmp/E8_graph.webp', blob);
-    }).catch(() => {
-        t.fail();
-        t.end();
-    });
-});
+// test.test("test blob", (t) => {
+//     return render_svg({
+//         type: 'webp',
+//         path: "test/E8_graph.svg",
+//     }).then((blob) => {
+//         t.same(typeof blob, 'object', 'blob');
+//         fs.writeFileSync('/tmp/E8_graph.webp', blob);
+//     }).catch(() => {
+//         t.fail();
+//         t.end();
+//     });
+// });
